@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HTMLFlipBook from "react-pageflip";
 
 const Tape = ({ className = "" }: any) => (
@@ -53,6 +53,13 @@ const VOLUMES = [
 export default function Home() {
   const [activeVol, setActiveVol] = useState<string | null>(null);
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://www.tiktok.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, [activeVol]);
+
   if (!activeVol) {
     return (
       <div className="min-h-screen w-full bg-[#efe6d5] flex flex-col items-center py-12 px-6">
@@ -104,6 +111,48 @@ export default function Home() {
             <p className="text-[8px] tracking-[0.3em] text-[#f7e9d7]/40 text-center">MADE WITH LOVE IN DAPUR SHADIRA</p>
           </div>
         </div>
+
+        {/* HALAMAN SOURCE TIKTOK - BARU */}
+        <Page decor={<><Tape className="w-[80px] top-[0px] left-[25%] rotate-[-10deg]" /><div className="absolute bottom-[15px] right-[10px] text-[9px] font-mono text-black/60 font-bold">ref: @shadirafirdausii</div></>}>
+          <div className="flex justify-between items-center"><span className="text-[9px] px-3 py-1 bg-black text-white tracking-widest rounded-full font-black">SOURCE</span><span className="text-[8px] tracking-[0.2em] text-black border-2 border-black/20 px-2 py-1 rounded-full font-black">VT TIKTOK 📱</span></div>
+          <h2 className="mt-4 font-serif text-[28px] leading-[0.9] text-black">Asli dari<br/><span className="italic text-black">Dapur Shadira</span></h2>
+          <p className="mt-2 text-[11px] font-serif italic text-black/70 leading-snug">"Semua resep di buku ini terinspirasi dari VT Ka Shadira. Full credit ke @shadirafirdausii di TikTok 🤎"</p>
+
+          <div className="mt-5 space-y-3">
+            <a href="https://www.tiktok.com/@shadirafirdausii" target="_blank" className="block relative bg-white border-2 border-black/10 p-3 rounded-[14px] shadow-[2px_3px_0px_#e9dcc3] rotate-[-0.5deg] hover:rotate-[0deg] transition">
+              <div className="flex gap-2">
+                <div className="w-[44px] h-[44px] rounded-full bg-black text-white flex items-center justify-center text-[18px]">▶️</div>
+                <div>
+                  <p className="text-[11px] font-black text-black">VT: Telur Udang Hongkong 🦐</p>
+                  <p className="text-[9px] text-black/60">@shadirafirdausii • tap untuk nonton VT asli</p>
+                </div>
+              </div>
+            </a>
+            <a href="https://www.tiktok.com/@shadirafirdausii" target="_blank" className="block relative bg-white border-2 border-black/10 p-3 rounded-[14px] shadow-[2px_3px_0px_#e9dcc3] rotate-[0.5deg] hover:rotate-[0deg] transition">
+              <div className="flex gap-2">
+                <div className="w-[44px] h-[44px] rounded-full bg-black text-white flex items-center justify-center text-[18px]">▶️</div>
+                <div>
+                  <p className="text-[11px] font-black text-black">VT: Ayam Kukus Jahe 🍗</p>
+                  <p className="text-[9px] text-black/60">@shadirafirdausii • tap untuk nonton VT asli</p>
+                </div>
+              </div>
+            </a>
+            <a href="https://www.tiktok.com/@shadirafirdausii" target="_blank" className="block relative bg-white border-2 border-black/10 p-3 rounded-[14px] shadow-[2px_3px_0px_#e9dcc3] rotate-[-0.3deg] hover:rotate-[0deg] transition">
+              <div className="flex gap-2">
+                <div className="w-[44px] h-[44px] rounded-full bg-black text-white flex items-center justify-center text-[18px]">▶️</div>
+                <div>
+                  <p className="text-[11px] font-black text-black">VT: Sup Jagung Telur 🌽</p>
+                  <p className="text-[9px] text-black/60">@shadirafirdausii • tap untuk nonton VT asli</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div className="mt-auto bg-[#fff7d6] border-2 border-black/10 p-3 rounded-[12px] text-center">
+            <p className="text-[8px] font-black tracking-[0.2em] text-black">FAN-MADE • NOT AFFILIATED • FREE • FULL CREDIT TO OWNER</p>
+            <p className="text-[8px] mt-1 text-black/60">Kalo keberatan, DM aku ya kak, langsung aku hapus 🙏</p>
+          </div>
+        </Page>
 
         <Page decor={<><Tape className="w-[90px] top-[0px] left-[25%] rotate-[-10deg]" /><div className="absolute top-[90px] right-[12px] bg-[#fff7d6] border-2 border-black/20 px-2 py-1 rounded-full text-[9px] font-black text-black rotate-[8deg] z-20">BEST SELLER! 🦐</div><div className="absolute bottom-[15px] left-[10px] text-[9px] font-mono text-black/60 rotate-[-2deg] font-bold">hal.1 — telur hongkong</div></>}>
           <div className="flex justify-between items-center"><span className="text-[9px] px-3 py-1 bg-black text-white tracking-widest rounded-full font-black">01</span><span className="text-[8px] tracking-[0.2em] text-black border-2 border-black/20 px-2 py-1 rounded-full font-black">TELUR UDANG HONGKONG ✨</span></div>
@@ -157,6 +206,7 @@ export default function Home() {
               <div className="h-28 rounded-[14px] overflow-hidden -rotate-1 border-2 border-white shadow-[2px_3px_0px_#e9dcc3] relative"><img src="/hasil2.png" className="w-full h-full object-cover" /></div>
             </div>
             <div className="mt-6 bg-black text-white px-4 py-2 rounded-full text-[10px] tracking-widest font-bold rotate-[-1deg]">"Makanan yang aku masak kalo suami lagi sakit" 🥹🫶</div>
+            <div className="mt-3 text-[9px] text-black/60">source: tiktok @shadirafirdausii</div>
             <button onClick={() => setActiveVol(null)} className="mt-4 text-[9px] tracking-widest border-2 border-black/20 px-4 py-2 rounded-full bg-white text-black font-black">← KEMBALI KE ARCHIVE</button>
           </div>
         </Page>
