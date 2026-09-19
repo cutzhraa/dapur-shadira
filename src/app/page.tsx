@@ -114,19 +114,34 @@ export default function Home() {
           </div>
         </div>
 
-        {/* HALAMAN VT REAL */}
+        {/* HALAMAN VT REAL - VERSI ESTETIK */}
         <Page decor={<><Tape className="w-[80px] top-[0px] left-[25%] rotate-[-10deg]" /></>}>
           <div className="flex justify-between items-center"><span className="text-[9px] px-3 py-1 bg-black text-white tracking-widest rounded-full font-black">SOURCE</span><span className="text-[8px] tracking-[0.2em] text-black border-2 border-black/20 px-2 py-1 rounded-full font-black">VT ASLI 📱</span></div>
           <h2 className="mt-3 font-serif text-[26px] leading-[0.9] text-black">Inspirasi dari<br/><span className="italic">VT Ka Shadira</span></h2>
-          <p className="mt-2 text-[10px] font-serif italic text-black/70">Tap video untuk nonton full di TikTok. Credit: @shaturday 🤎</p>
 
-          <div className="mt-4 flex flex-col items-center">
-             <blockquote className="tiktok-embed" cite="https://www.tiktok.com/@shaturday/video/7686860545034554644" data-video-id="7686860545034554644" style={{maxWidth: '325px', minWidth: '325px'}}>
-              <section> <a target="_blank" title="@shaturday" href="https://www.tiktok.com/@shaturday?refer=embed">@shaturday</a> </section>
-            </blockquote>
+          <div className="mt-5 space-y-4">
+            {/* VT 1 */}
+            <a href="https://www.tiktok.com/@shaturday/video/7686860545034554644" target="_blank" className="group block relative h-[200px] rounded-[16px] overflow-hidden border-2 border-white shadow-[3px_4px_0px_#e9dcc3] rotate-[-0.5deg]">
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600" className="w-full h-full object-cover group-hover:scale-105 transition" />
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-[56px] h-[56px] bg-white/90 rounded-full flex items-center justify-center text-[24px] shadow-lg">▶️</div>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
+                <p className="text-white text-[11px] font-black">SEHARIAN MAKAN SERBA DARI NEGARA...</p>
+                <p className="text-white/70 text-[9px]">@shaturday • 5.4M views • Tap untuk nonton</p>
+              </div>
+              <Tape className="w-[50px] -top-1 left-4 rotate-[-10deg]" />
+            </a>
+
+            {/* VT 2 */}
+            <a href="https://www.tiktok.com/@shaturday" target="_blank" className="block bg-white border-2 border-black/10 p-3 rounded-[14px] shadow-[2px_3px_0px_#e9dcc3] rotate-[0.5deg]">
+              <p className="text-[10px] font-black text-black">🔗 Lihat semua VT Ka Shadira di TikTok</p>
+              <p className="text-[9px] text-black/60">@shaturday / @shadirafirdausii</p>
+            </a>
           </div>
 
-          <div className="mt-3 bg-[#fff7d6] border-2 border-black/10 p-2 rounded-[10px] text-center">
+          <div className="mt-auto bg-[#fff7d6] border-2 border-black/10 p-2 rounded-[10px] text-center">
             <p className="text-[8px] font-black tracking-widest">FAN-MADE • FULL CREDIT TO @shaturday</p>
           </div>
         </Page>
